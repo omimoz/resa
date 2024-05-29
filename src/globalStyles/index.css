@@ -1,0 +1,52 @@
+@import "reset.css";
+:root {
+  --primary-bg: #212630;
+  --secondary-bg: #29303d;
+  --primary-txt: white;
+  --secondary-txt: #777f8d;
+  --increment: #2da678;
+  --decrement: #f4445b;
+  --container: 0.5rem;
+  --loader-background-color: #29303d;
+  --loader-highlight-color: #414c61;
+}
+.skeleton-loader {
+  width: 300px;
+  height: 20px;
+  background: linear-gradient(
+    90deg,
+    var(--loader-background-color) 25%,
+    var(--loader-highlight-color) 50%,
+    var(--loader-background-color) 75%
+  );
+  background-size: 200% 100%;
+  animation: loading 2s infinite ease-in-out;
+  margin-bottom: 20px;
+}
+.decrease{
+  color: var(--decrement);
+}
+.increase{
+  color: var(--increment);
+}
+.cover-image-skeleton {
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--loader-background-color) 25%,
+    var(--loader-highlight-color) 50%,
+    var(--loader-background-color) 75%
+  );
+  background-size: 200% 100%;
+  animation: loading 2s infinite ease-in-out;
+  margin-bottom: .5rem;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
